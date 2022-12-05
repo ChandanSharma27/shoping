@@ -17,9 +17,6 @@ const { json } = require("express");
 //         message : "this is working"
 //     })
 //  })
-
-
-
 app.use(cors()); 
 app.use(express.static(path.join(__dirname, '../')));
 app.use(express.json());
