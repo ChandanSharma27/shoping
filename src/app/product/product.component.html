@@ -1,0 +1,11 @@
+<div class="inp">Search : <input type="text" placeholder="enter the title of book" [(ngModel)] = 'searchText'>
+  cart : {{cart.length}}
+</div>
+<!-- {{searchText}} -->
+<div class="card" *ngFor = "let element of product.data | filter : searchText">
+    <div class = "title">{{element.title}}</div>
+    <div>Author : {{element.author}}</div>
+    <div>Year : {{element.year}}</div>
+    <button (click) ="addToCart(element)">Add to Cart</button>
+  </div>
+<!-- {{product | json}} -->
