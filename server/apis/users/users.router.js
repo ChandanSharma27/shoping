@@ -6,6 +6,6 @@ const router = require("express").Router();
 router.get('/book',getbooks);
 router.post('/create',createusers);
 router.get('/delete/:id',userDelete);
-router.patch('/update',updateusers);
+router.post('/update',updateusers);
 
 module.exports = router;

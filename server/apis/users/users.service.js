@@ -42,10 +42,31 @@ module.exports = {
             }
         })
     },
+    // updateUser : (data, callback) => {
+    //     pool.query(`UPDATE registration SET firstName=?, lastName=?, number=?, gender=?, email=?, password=? WHERE id=?`,
+    //     [
+    //         data.firstName,
+    //         data.lastName,
+    //         data.number,
+    //         data.gender,
+    //         data.email,
+    //         data.password,
+    //         data.id
+    //     ],
+    //     (error,result,field) => {
+    //         if (error){
+    //             return callback(error)
+    //         }
+    //         else {
+    //             return callback(null,result)
+    //         }
+    //     })
+    // },
+
     updateUser : (data, callback) => {
-        console.log(data)
+        // console.log(data)
         pool.query(`UPDATE registration SET firstName=?, lastName=?, number=?, gender=?, email=?, password=? 
-        WHERE id=?`),
+        WHERE id=?`,
         [
             data.firstName,
             data.lastName,
@@ -57,12 +78,12 @@ module.exports = {
         ],
         (error,result,field) => {
             if (error){
-                return callback(error)
+                return callback(error);
             }
-            else {
-                return callback(null,result)
-            }
-        }
-    }, 
+            
+            return callback(null,result);
+            
+        })
+    } 
     
 }

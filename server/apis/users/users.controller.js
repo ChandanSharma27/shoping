@@ -59,19 +59,18 @@ module.exports = {
         const body = req.body;
         updateUser(body,(error,result) => {
             if (error){
-                console.log(error)
+                // console.log(error)
                 return res.status(500).json({
                     status : 2,
                     message : "not able to update"
-                })
+                });
             }
-            else{
                 return res.status(200).json({
                     status : 1,
-                    data : result
-                })
+                    message : "updated successfully"
+                });
             }
-        })
+        )
         
     },
 }
