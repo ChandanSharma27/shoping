@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-const bookrouter = require('./apis/users/users.router');
+// const bookrouter = require('./apis/users/users.router');
 const userRouter = require('./apis/users/users.router');
 
 const path = require('path');
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '../')));
 app.use(express.json());
 
 
-app.use('/apis',bookrouter);
+// app.use('/apis',userRouter);
 app.use('/apis/users',userRouter);
 
 //localhost 

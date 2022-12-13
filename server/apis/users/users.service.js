@@ -11,7 +11,7 @@ module.exports = {
             }
         })
     },
-   create : (data, callback) => {
+    create : (data, callback) => {
         pool.query(`insert into registration(firstName, lastName, number, gender, email, password) values(?,?,?,?,?,?)`,
         [
             data.firstName,

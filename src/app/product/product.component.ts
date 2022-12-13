@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit{
-  url = 'http://localhost:3000/apis/book';
+  url = 'http://localhost:3000/apis/users/book';
   product : any;
   searchText = '';
   cart : any = [];

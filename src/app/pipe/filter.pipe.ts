@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
             if (filterBy) {
             return value.filter(product => {
                 // return product.title === filterBy;
-                return product.title.toLocaleLowerCase().indexOf(filterBy) !== -1;
+                return product.author.toLocaleLowerCase().indexOf(filterBy) !== -1;
                 
             }) 
             
