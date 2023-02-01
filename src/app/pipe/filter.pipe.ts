@@ -10,11 +10,10 @@ export class FilterPipe implements PipeTransform {
             if (filterBy) {
             return value.filter(product => {
                 // return product.title === filterBy;
-                return product.author.toLocaleLowerCase().indexOf(filterBy) !== -1;
+                return product.title.toLocaleLowerCase().indexOf(filterBy) !== -1;
                 
             }) 
-            
-        }
-        else {return value}
+            }
+            else {return value}
     }
 }
